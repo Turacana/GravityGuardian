@@ -199,7 +199,7 @@ size: Math.random() * 1.2 + 0.6,
       return true;
     });
 
-    if (this.rocketSuccesses > 10) {
+    if (this.rocketSuccesses > 20) {
       this.winGame();
     }
 
