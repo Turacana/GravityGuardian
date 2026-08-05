@@ -582,23 +582,26 @@ size: Math.random() * 1.2 + 0.6,
     ctx.textBaseline = 'top';
 
     ctx.font = 'bold 42px Inter, system-ui, sans-serif';
-    ctx.fillText('Gravity Guardian', this.center.x, this.center.y - 220);
+    ctx.fillText('Gravity Guardian', this.center.x, this.center.y - 260);
 
     ctx.font = '18px Inter, system-ui, sans-serif';
     const lines = [
       'Игрок управляет чёрной дырой, которая защищает Землю от астероидов.',
-      'После трех попаданий астероидов жизнь на Земле будет уничтожена.',
       'Чем больше становится чёрная дыра, тем эффективнее она уничтожает угрозы,',
       'но тем сильнее начинает влиять на планеты и их орбиты.',
-      '',
+       '',
+      'После трех попаданий астероидов жизнь на Земле будет уничтожена.',
+
+
+      
+     
+          'Галактическая эскадра должна в полном составе покинуть систему, прежде чем солнечная система будет полностью разрушена.',
 
       'Игрок должен балансировать между получением силы и ответственностью за последствия своих действий.',
-      '',
-    
-
+ '',
       'Управление: WASD или стрелки для перемещения чёрной дыры, I для отображения отладочной информации.',
     ];
-    const startY = this.center.y - 140;
+    const startY = this.center.y - 180;
     const lineHeight = 28;
     lines.forEach((line, index) => {
       ctx.fillText(line, this.center.x, startY + index * lineHeight);
