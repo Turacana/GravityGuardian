@@ -35,3 +35,5 @@ window.addEventListener('keydown', (event) => {
     game.reset();
   }
 });
+
+

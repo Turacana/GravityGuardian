@@ -274,6 +274,17 @@ size: Math.random() * 1.2 + 0.6,
   }
 
   draw() {
+        const ratio = window.devicePixelRatio || 1;
+            this.context.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    this.context.clearRect(
+        0,
+        0,
+        this.width,
+        this.height
+    );
+
+
     const ctx = this.context;
     ctx.clearRect(0, 0, this.width, this.height);
 
@@ -522,7 +533,7 @@ size: Math.random() * 1.2 + 0.6,
       ctx.font = '12px Inter, system-ui, sans-serif';
       ctx.fillStyle = `rgba(255, 255, 255, ${0.72 * alpha})`;
       ctx.textAlign = 'center';
-      ctx.fillText('Alerts', px + dx * 24, py + dy * 24);
+      ctx.fillText('Alert', px + dx * 24, py + dy * 24);
     });
     ctx.restore();
   }
@@ -550,8 +561,8 @@ size: Math.random() * 1.2 + 0.6,
       `Ships: ${this.rocketSuccesses} / 20`,
     ];
     const lines = this.showDebug
-      ? [...debugLines, this.isGameOver ? 'Press R to restart' : '']
-      : [`Mass: ${Math.round(this.blackHole.mass)}`, `Ships: ${this.rocketSuccesses} / 20`, this.isGameOver ? 'Press R to restart' : ''];
+      ? [...debugLines, this.isGameOver ? 'Press F5 to restart' : '']
+      : [`Mass: ${Math.round(this.blackHole.mass)}`, `Ships: ${this.rocketSuccesses} / 20`, this.isGameOver ? 'Press F5 to restart' : ''];
     let y = 16;
     lines.forEach((line) => {
       if (!line) return;
@@ -627,7 +638,7 @@ size: Math.random() * 1.2 + 0.6,
     ctx.fillText('Game Over', this.center.x, this.center.y - 40);
     ctx.font = '20px Inter, system-ui, sans-serif';
     ctx.fillText(`Final Time: ${Math.floor(this.time)}`, this.center.x, this.center.y + 10);
-    ctx.fillText('Restart (R)', this.center.x, this.center.y + 42);
+    ctx.fillText('Restart (F5)', this.center.x, this.center.y + 42);
     ctx.restore();
   }
 
