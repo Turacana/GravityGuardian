@@ -6,7 +6,7 @@ export default class Asteroid {
     this.target = { x: target.x, y: target.y };
     this.radius = radius;
     this.speed = 120;
-    this.mass = radius * 0.7;
+    this.mass = radius * 1;
     const direction = normalize(target.x - position.x, target.y - position.y);
     this.velocity = {
       x: direction.x * this.speed,

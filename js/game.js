@@ -274,17 +274,6 @@ size: Math.random() * 1.2 + 0.6,
   }
 
   draw() {
-        const ratio = window.devicePixelRatio || 1;
-            this.context.setTransform(ratio, 0, 0, ratio, 0, 0);
-
-    this.context.clearRect(
-        0,
-        0,
-        this.width,
-        this.height
-    );
-
-
     const ctx = this.context;
     ctx.clearRect(0, 0, this.width, this.height);
 

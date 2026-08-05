@@ -3,7 +3,7 @@ export default class BlackHole {
     this.center = { x: center.x, y: center.y };
     this.orbitRadius = orbitRadius;
     this.speed = speed;
-    this.mass = 8;
+    this.mass = 25;
     this.baseGravityRadius = baseGravityRadius;
     this.eventHorizonRadius = eventHorizonRadius;
     this.radius = 18;
@@ -36,7 +36,7 @@ export default class BlackHole {
   }
 
   absorbPlanet(planet) {
-    const planetMass = planet.radius * 2.4;
+    const planetMass = planet.radius * 3;
     this.mass += planetMass;
   }
 
