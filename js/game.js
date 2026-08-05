@@ -547,11 +547,11 @@ size: Math.random() * 1.2 + 0.6,
       `Time: ${Math.floor(this.time)}`,
       `Gravity: ${Math.round(this.blackHole.gravityRadius)}`,
       `Earth HP: ${earth ? earth.hp : 0}`,
-      `Ships: ${this.rocketSuccesses} / 10`,
+      `Ships: ${this.rocketSuccesses} / 20`,
     ];
     const lines = this.showDebug
       ? [...debugLines, this.isGameOver ? 'Press R to restart' : '']
-      : [`Mass: ${Math.round(this.blackHole.mass)}`, `Ships: ${this.rocketSuccesses} / 10`, this.isGameOver ? 'Press R to restart' : ''];
+      : [`Mass: ${Math.round(this.blackHole.mass)}`, `Ships: ${this.rocketSuccesses} / 20`, this.isGameOver ? 'Press R to restart' : ''];
     let y = 16;
     lines.forEach((line) => {
       if (!line) return;
@@ -642,8 +642,6 @@ size: Math.random() * 1.2 + 0.6,
     ctx.font = '24px Inter, system-ui, sans-serif';
     ctx.fillText(`Галактическая эскадра успешно покинула систему!`, this.center.x, this.center.y - 10);
     ctx.font = '18px Inter, system-ui, sans-serif';
-    ctx.fillText(`Ушло в космос: ${this.rocketSuccesses} кораблей`, this.center.x, this.center.y + 26);
-    ctx.fillStyle = 'rgba(255,255,255,0.75)';
     ctx.fillText('Поздравляем! Нажмите R для перезапуска.', this.center.x, this.center.y + 72);
     ctx.restore();
   }
