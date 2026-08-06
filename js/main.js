@@ -30,10 +30,6 @@ function frame(now) {
 }
 
 requestAnimationFrame(frame);
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'r' || event.key === 'R') {
-    game.reset();
-  }
-});
+
 
 

@@ -547,7 +547,7 @@ size: Math.random() * 1.2 + 0.6,
       `Time: ${Math.floor(this.time)}`,
       `Gravity: ${Math.round(this.blackHole.gravityRadius)}`,
       `Earth HP: ${earth ? earth.hp : 0}`,
-      `Ships: ${this.rocketSuccesses} / 20`,
+      `Ships: ${this.rocketSuccesses} / 19`,
     ];
     const lines = this.showDebug
       ? [...debugLines, this.isGameOver ? 'Press F5 to restart' : '']
@@ -644,7 +644,7 @@ size: Math.random() * 1.2 + 0.6,
     ctx.font = '24px Inter, system-ui, sans-serif';
     ctx.fillText(`Галактическая эскадра успешно покинула систему!`, this.center.x, this.center.y - 10);
     ctx.font = '18px Inter, system-ui, sans-serif';
-    ctx.fillText('Поздравляем! Нажмите R для перезапуска.', this.center.x, this.center.y + 72);
+    ctx.fillText('Поздравляем! Нажмите F5 для перезапуска.', this.center.x, this.center.y + 72);
     ctx.restore();
   }
 }
