@@ -546,12 +546,11 @@ size: Math.random() * 1.2 + 0.6,
     const debugLines = [
       `Time: ${Math.floor(this.time)}`,
       `Gravity: ${Math.round(this.blackHole.gravityRadius)}`,
-      `Earth HP: ${earth ? earth.hp : 0}`,
-      `Ships: ${this.rocketSuccesses} / 19`,
+      `Ships: ${this.rocketSuccesses} / 20`,
     ];
     const lines = this.showDebug
       ? [...debugLines, this.isGameOver ? 'Press F5 to restart' : '']
-      : [`Mass: ${Math.round(this.blackHole.mass)}`, `Ships: ${this.rocketSuccesses} / 20`, this.isGameOver ? 'Press F5 to restart' : ''];
+      : [`Earth HP: ${earth ? earth.hp : 0}`, `Mass: ${Math.round(this.blackHole.mass)}`, `Ships: ${this.rocketSuccesses} / 20`, this.isGameOver ? 'Press F5 to restart' : ''];
     let y = 16;
     lines.forEach((line) => {
       if (!line) return;
